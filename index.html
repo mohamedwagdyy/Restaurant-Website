@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/Home.css">    
+    <link rel="shortcut icon" href="/images/burger logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"   >
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>M Home</title>
+</head>
+
+ <body>
+<header>
+    <div class="header">
+
+        <div class="headerbar">
+            <div class="acc">
+                <ul>
+                    <a href="">
+                        <li>
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </li>
+                    </a>
+                    <a href="#">  
+                        <li>
+                            <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon1"></i>
+                        </li>
+                    </a>
+                    <div class="search" id="searchinput1">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i>
+                    </div>
+                    <a href="/login form.html">
+                        <li>
+                            <i class="fa-solid fa-user" id ="user-mb"></i>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="#">
+                        <li>Home</li>
+                    </a>
+                    <a href="/About us.html">
+                        <li>About</li>
+                    </a>
+                    <a href="/FoodMenu1.html">
+                        <li>Food Menu</li>
+                    </a>
+                    <a href="Drinkmenu1.html">
+                        <li>Drink Menu</li>
+                    </a>
+                    <a href="BookTable.html">
+                        <li>Book Table</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="logo">
+            <a href="#" class="logo"><i class='bx bxl-gmail' ></i></a>
+        </div>
+        <div class="bar">
+            <i class="fa-solid fa-bars"></i>    
+            <i class="fa-solid fa-xmark" id="hdcross"></i>
+        </div>
+        <div class="nav">
+            <ul>
+                <i class="fa fa-moon" aria-hidden="true" onclick=" darkmode()"></i>
+                <a href ="#">
+                    <li> Home</li>
+                </a>
+                <a href="About us.html"> 
+                    <li>About </li>
+                </a>
+                <a href="/FoodMenu1.html">
+                    <li> Food Menu </li>
+                </a>
+                <a href="Drinkmenu1.html">
+                    <li> Drink Menu </li>
+                </a>
+                <a href="BookTable.html">
+                    <li>Book Table </li>
+                </a>
+           
+            </ul>
+        </div>
+        <div class="acc">
+            <ul>
+                <a href='#'>
+                    <li>
+                        <span i class="fa-solid fa-house fa-house-chimney"></i></span>
+                    </li>  
+                </a>
+                <a href='#'>
+                    <li>
+                        <i class="fa-solid fa-magnifying-glass searchicon" id="searchicon2"></i>
+                    </li>        
+                </a>
+                <div class="search" id="searchinput2">
+                        <input type="search">
+                        <i class="fa-solid fa-magnifying-glass srchicon"></i> 
+                </div>
+                 <a href="#">
+                     <li>
+                        <a href="/login form.html" i class="fa-solid fa-user" id="user-lap"></i></a>
+                    </li>        
+                </a>
+
+             </ul>
+    
+        </div>
+    </div>
+</header>
+
+
+<div class="home">
+ 
+    <div class="main_slide">
+        
+            <div>
+                <h1>Enjoy <span id="Delicious Food" style="color: rgb(253, 57, 8)">Delicious Food</span> in your Healthy Life</h1>
+                <p>Welcome to Our Restaurant , Get ready to tantalize your taste buds with our mouthwatering menu. 
+                    From hearty classics to delightful surprises, we've got something for every palate.
+                    At Our Restaurant, every dish is made with love, every flavor is a celebration.
+                     Treat yourself to a feast of flavors and make memories that'll last a lifetime.
+                </p>
+
+                <button id="visit" class="redbtn">Visit Now <i class="fa-solid fa-arrow-right-long"></i> </button>
+            </div>
+            <div class="imgs">
+                <img src="images/Food Plate.png" alt="">
+            </div>
+    </div>
+ 
+<div class="food-items">
+     
+    <div class="item">
+            <div>
+                <img src="images/kebab plate.jpg" alt="Food item">
+            </div>
+            <h3>Kebab Plate</h3>
+            <p> This dish gets its unique flavour from fresh ground beef, onions and robust spices.</p>
+            <a  href="FoodMenu1.html"><button class="white_btn">See Menu</button></a>
+    </div>
+    <div class="item">
+            <div>
+                <img src="images/nuggets.png" alt="Food item">
+            </div>
+            <h3>Nuggets</h3>
+            <p> simple ingredients like panko breadcrumbs, chicken breast and spices,Serve with honey mustard</p>
+           <a href="FoodMenu2.html"> <button class="redbtn">See Menu</button></a>
+    </div>
+    <div class="item">
+            <div>
+                <img src="images/grilled fiss.jpg" alt="Food item">
+            </div>
+            <h3>Grilled Fish </h3>
+            <p> lorem ipsum dolkor sit amet conscuter adpsiigng elit repp;ledi , siutns! Grilled fish with a lemon bruise</p>
+            <a  href="FoodMenu1.html"><button class="white_btn">See Menu</button></a>
+    </div>
+</div>
+    
+<div class="main_slide2">
+    <div class="fav-head">
+        <h3>Our Popular Food Items</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+    <div class="fav-food">
+        <div class="item">
+            <div>
+            <video controls src="/images/Untitled video - Made with Clipchamp.mp4">
+            </div>
+             <h3>Fried Rice</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="fav-price">$5.60 </p>
+        </div>    
+        <div class="item">
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Z_WHZgQpxvA?si=xU6r-srWRUScS3G8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+             <h3>Smash Burger</h3>
+             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+             <p class="fav-price">$5.60 </p>
+        </div>  
+        <div class="item">
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/nOg-UCvoNMo?si=ogWzE0xCDe9G6mXS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+             <h3>Lasagna</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p class="fav-price">$5.60 </p>
+        </div>  
+          
+    </div>
+    <div class="design"></div>
+    <footer class="footer">
+        <div class="footerContainer">
+             <div class="socialIcons">
+                 <a href=""> <i class="fa-brands fa-facebook"></i> </a>
+                 <a href=""> <i class="fa-brands fa-instagram"></i> </a>
+                 <a href=""> <i class="fa-brands fa-twitter"></i> </a>
+                 <a href=""> <i class="fa-brands fa-google-plus"></i> </a>
+                 <a href=""> <i class="fa-brands fa-youtube"></i> </a>
+ 
+             </div>
+             <div class="footerNav">
+                 <ul>
+                     <li> <a href="/index.html">Home</a></li>
+                     <li> <a href="About us.html">About</a></li>
+                     <li> <a href="/review.html">Reviews</a></li>
+                     <li> <a href="/ContactUs.html">Contact Us</a></li>
+                 </ul>
+                 <div class="col">
+                    <h3>Newsletter</h3>
+                    <form id="Newsteller">
+                        <i class="fa-solid fa-envelope"></i>  
+                        <input type="email" id="email" placeholder="Enter your email" >
+                        <button type="submit" id="submitButton"><i class="fas fa-arrow-right"></i> </button>
+                    </form>
+                 </div>    
+                 
+             </div>
+         </div>
+         <div class="footerBottom">
+             <p>Copyright &copy;2024 by  Mohamed Wagdy  | All Rights Reserved </p>
+         </div>
+        
+     </footer>    
+
+<script src="/js/Home.js"></script>
+
+</body>
+</html>

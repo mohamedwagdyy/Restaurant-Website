@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>order</title>
+        <link rel="stylesheet" href="/css/order.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"   >
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/css/multi-select-tag.css">
+        <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+    <body>
+        <div class="background">
+        </div>
+        <div class="high" >
+            <form  method="get">
+                <a href="FoodMenu1.html"> <i class="fa-solid fa-xmark" id="hdcross"></i> </a>
+                <h2>Request your order</h2>
+              
+
+                <div class="big1">
+                    <div class="data">
+                        <label for="fn" class="r">First Name:</label>
+                        <input id="fn" type="text" placeholder="Enter your first name" required pattern="^[A-Za-z\s]+$">
+                    </div>
+                    
+                    <div class="data">
+                        <label for="ln">Last Name:</label>
+                        <input id="ln" type="text" placeholder="Enter your last name" required pattern="^[A-Za-z\s]+$">
+                    </div>
+                    
+                    <div class="data">
+                        <label for="num">Phone Number:</label>
+                        <input id="num" type="tel" pattern="\d{11}" placeholder="Enter your phone number (11 digits)" minlength="11" maxlength="11" required>
+                    </div>
+                    
+                    <div class="data">
+                        <label for="ad">Address:</label>
+                        <input id="ad" type="text" placeholder="Enter your address" required>
+                    </div>
+                    <div class="big2">
+                        <h2>Choose your order</h2>
+                        <label for="Pizaa"> pizaa</label>
+                        <select name="options" id="Pizza" multiple>
+                            <option value="philly_cheese_steak">Philly Cheese Steak </option>
+                            <option value="legend_chicken_bbq">Legend Chicken BBQ</option>
+                            <option value="legend_chicken_hot">Legend Chicken Hot</option>
+                            <option value="legend_chicken_ranch">Legend Chicken Ranch</option>
+                            <option value="chicken_kickers_bbq">Chicken Kickers BBQ</option>
+                            <option value="chicken_kickers_ranch">Chicken Kickers Ranch</option>
+                            <option value="chicken_kickers_hot">Chicken Kickers Hot</option>
+                            <option value="alfredo_pizza">Alfredo Pizza</option>
+                            <option value="extra_pepperoni">Extra Pepperoni</option>
+                            <option value="italiano">Italiano</option>
+                            <option value="chicken_dynamite">Chicken Dynamite</option>
+                            <option value="veggie">Veggie</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="big3">
+                        <label for="Burger"> Burger</label>
+                        <select name="options" id="Burger" multiple>
+                            <option value="Classic Burger">Classic Burger</option>
+                            <option value="Beff Burger">Beff Burger</option>
+                            <option value="Cheese Burger">Cheese Burger</option>
+                            <option value="Double Cheese Burger">Double Cheese Burger</option>
+                            <option value="Burger combo">Burger combo</option>
+                            <option value="Spicy Burger">Spicy Burger</option>
+                            <option value="single Burger">single Burger</option>
+                            <option value="Grilled Burger">Grilled Burger</option>
+                        </select>
+                    </div>    
+                    <hr>
+                    <div class="big4">
+                        <label for="Oriental food"> Oriental food</label>
+                        <select name="options" id="Oriental food" multiple>
+                            <option value="Kofta">Kofta</option>
+                            <option value="Sojok">Sojok</option>
+                            <option value="Kebda">Kebda</option>
+                            <option value="Hawawshi">Hawawshi</option>
+                            <option value="Kbab Halla">Kbab Halla</option>
+                            <option value="Chicken Fillet">Chicken Fillet</option>
+                            <option value="Grilled Chicken">Grilled Chicken</option>
+                            <option value="Tarb">Tarb</option>
+                            <option value="Shish Tawook">Shish Tawook</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="big5">
+                        <label for="Western food"> Western food</label>
+                        <select name="options" id="Western food" multiple>
+                            <option value="Masala and Chai">Masala and Chai </option>
+                            <option value="Firecracker chicken">Firecracker chicken</option>
+                            <option value="Saucy Ramen Noodles">Saucy Ramen Noodles</option>
+                            <option value="Spicy italian Sausage Baked Ziti">Spicy italian Sausage Baked Ziti</option>
+                            <option value="Baked Buffalo Wings">Baked Buffalo Wings</option>
+                            <option value="Shrimp Fried Rice">Shrimp Fried Rice</option>
+                            <option value="Garlic Parmesan Butter Roasted Potatoes">Garlic Parmesan Butter Roasted Potatoes</option>
+                            <option value="Pan-Seared Salmon with Lemon Garlic Sauce">Pan-Seared Salmon with Lemon Garlic Sauce</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="big6">
+                        <label for="Drinks"> Drinks</label>
+                        <select name="options" id="Drinks" multiple>
+                            <option value="Strawbarry Frappe">Strawbarry Frappe </option>
+                            <option value="Caramel Frappe">Caramel Frappe</option>
+                            <option value="Choclate Chip">Choclate Chip</option>
+                            <option value="Gourmet Frappe">Caramel Frappe</option>
+                            <option value="Oreo Frappe">Caramel Frappe</option>
+                            <option value="Ice Coffee">Ice Coffee</option>
+                            <option value="Caramel Michatooe">Caramel Michatooe</option>
+                            <option value="Vanillia Milk">Vanillia Milk</option>
+                            <option value="Milk">Milk</option>
+                        </select>
+                    </div>
+                    <hr>
+                    <div class="7">
+                        <label for="Ice Cream"> Ice Cream</label>
+                        <select name="options" id="Ice Cream" multiple>
+                            <option value="mango">mango</option>
+                            <option value="Vanilla">Vanilla</option>
+                            <option value="Strawberry">Strawberry</option>
+                            <option value="Chocolate">Chocolate</option>
+                            <option value="lemon">lemon</option>
+                            <option value="Oreo">Oreo</option>
+                        </select>
+                    </div>
+                    
+                    <input id="button" type="submit" value="order now ">
+                </div>
+            </form>
+        </div>
+        <script src="/js/order.js"></script>
+    </body>
+</html>

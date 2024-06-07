@@ -1,0 +1,214 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('/images/backgroud\ pic.png') no-repeat; 
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(px);
+}
+
+.container{
+ 
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.container .forms{
+    display: flex;
+    align-items: center;
+    height: 440px;
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+.container   .fa-xmark{
+color: rgb(0, 0, 0);
+ margin-left: 90%;
+ margin-top: 3%;
+ cursor: pointer;
+}
+
+.container   .fa-xmark:hover{
+    color: rgb(253, 57, 8);
+ }
+.container .form{
+    width: 50%;
+    padding: 30px;
+    backdrop-filter: blur(10px); 
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login{
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup{
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+.container.active .signup{
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms{
+    height: 600px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+     border-radius: 25px;
+     background-color: rgb(253, 57, 8);
+}
+ 
+.form .input-field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+ 
+.input-field input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+     border-bottom: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+    background-color: transparent;
+}
+
+.input-field input:is(:focus, :valid){
+    border-bottom-color: rgb(253, 57, 8);
+}
+
+.input-field input::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+.input-field input::placeholder:hover {
+    color:rgb(253, 57, 8);
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000000;
+    font-size: 23px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: rgb(253, 57, 8);
+}
+
+.input-field i.icon{
+    left: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin-right: 10px;
+    accent-color: rgb(253, 57, 8);
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a.text{
+    color: #484b43;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+    color:  rgb(253, 57, 8);
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color:white;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 19px;
+    background-color: rgb(253, 57, 8);
+    box-shadow: 0 2px 15px  rgb(253, 57, 8);
+    border: 1px solid  rgb(253, 57, 8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+    background-color: white;
+    color:  rgb(253, 57, 8);
+}
+
+.form .login-signup{
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media (max-width: 360px) {
+    .login-box {
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: none;
+    }
+
+    .input-box {
+        width: 290px;
+    }
+}

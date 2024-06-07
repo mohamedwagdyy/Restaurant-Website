@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"   >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form Restaurant</title>
+    <link rel="stylesheet" href="/css/Login Form.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+<body>
+    
+    <div class="container">
+        <a href="index.html"> <i class="fa-solid fa-xmark" id="hdcross"></i> </a>
+        <div class="forms">
+            
+            <div class="form login">
+                <span class="title">Login</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Enter your password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Remember me</label>
+                        </div>
+                        
+                        <a href="#" class="text">Forgot password?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Login">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Don't have an account?
+                        <a href="#" class="text signup-link">Sign up</a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="form signup">
+                <span class="title">Registration</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your name" required>
+                        <i class="uil uil-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter your email" required>
+                        <i class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Create a password" required>
+                        <i class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Confirm a password" required>
+                        <i class="uil uil-lock icon"></i>
+                        <i class="uil uil-eye-slash showHidePw"></i>
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">I accepted all terms and conditions</label>
+                        </div>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Signup">
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">Already have an account?
+                        <a href="#" class="text login-link">Log In  </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <script src="script.js"></script> 
+</body>
+</html>
+<script>
+    function savedata(){
+    let email, password;
+    email=document.getElementById("email").value;
+    password=document.getElementById("password").value;
+    
+    let user_record=new Array();
+    user_record=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    if(user_record.some((v)=>{
+        return v.email==email && v.password==password
+    })){
+        alert("Login Successful")
+        let current_user=user_record.filter((v)=>{
+            return v.email==email && v.password==password
+        })[0]
+
+        localStorage.setItem("email",current_user.email);
+        localStorage.setItem("password",current_user.password);
+        window.location.href="Restaurant.html";
+    }
+    else{
+        alert("Login Fail");
+    }
+
+    
+} 
+
+const container = document.querySelector(".container"),
+      pwShowHide = document.querySelectorAll(".showHidePw"),
+      pwFields = document.querySelectorAll(".password"),
+      signUp = document.querySelector(".signup-link"),
+      login = document.querySelector(".login-link");
+
+    //   js code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon =>{
+        eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            }) 
+        })
+    })
+
+    // js code to appear signup and login form
+    signUp.addEventListener("click", ( )=>{
+        container.classList.add("active");
+    });
+    login.addEventListener("click", ( )=>{
+        container.classList.remove("active");
+    });
+</script>
+</body>
+</html>
